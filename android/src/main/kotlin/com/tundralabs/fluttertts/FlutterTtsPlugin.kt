@@ -196,9 +196,9 @@ class FlutterTtsPlugin : MethodCallHandler, FlutterPlugin {
 
                 // Handle pending method calls (sent while TTS was initializing)
                 isTtsInitialized = true
-                for (call in pendingMethodCalls) {
-                    call.run()
-                }
+                // for (call in pendingMethodCalls) {
+                //     call.run()
+                // }
                 invokeMethod("tts.init", isTtsInitialized) 
             } else {
                 Log.e(tag, "Failed to initialize TextToSpeech with status: $status")
@@ -223,9 +223,9 @@ class FlutterTtsPlugin : MethodCallHandler, FlutterPlugin {
 
                 // Handle pending method calls (sent while TTS was initializing)
                 isTtsInitialized = true
-                for (call in pendingMethodCalls) {
-                    call.run()
-                }
+                // for (call in pendingMethodCalls) {
+                //     call.run()
+                // }
             } else {
                 Log.e(tag, "Failed to initialize TextToSpeech with status: $status")
             }
